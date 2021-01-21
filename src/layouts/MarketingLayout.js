@@ -61,27 +61,13 @@ const MainNav = ({ onLinkClicked, ...props }) => {
   return (
     <MainNavStyle {...props}>
       <Link
-        href={`${navigation.basename}/trade`}
-        activeStyle={{ fontWeight: 'bold' }}
-        onClick={() => onLinkClicked && onLinkClicked()}
-      >
-        {lang.navbar.trade}
-      </Link>
-      <Link
         href={`${navigation.basename}`}
         activeStyle={{ fontWeight: 'bold' }}
         onClick={() => onLinkClicked && onLinkClicked()}
       >
         {lang.navbar.borrow}
       </Link>
-      <Link
-        href={'https://oasis.app'}
-        activeStyle={{ fontWeight: 'bold' }}
-        onClick={() => onLinkClicked && onLinkClicked()}
-      >
-        {lang.navbar.save}
-      </Link>
-      <Link href="https://blog.oasis.app/">{lang.navbar.blog}</Link>
+      <Link href="https://qqq.com/">Dapp Portal</Link>
     </MainNavStyle>
   );
 };
