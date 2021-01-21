@@ -12,9 +12,7 @@ const Navbar = ({ viewedAddress }) => {
     <Box bg={account ? 'blueGray' : 'white'} height="100%">
       <Flex alignItems="center" justifyContent="center" py="m" />
       <Grid mx="0px">
-        <SaveNav account={account} />
         <BorrowNav viewedAddress={viewedAddress} account={account} />
-        <TradeNav />
       </Grid>
     </Box>
   );

@@ -84,12 +84,6 @@ const MobileNav = ({ viewedAddress }) => {
       height={getMeasurement('mobileNavHeight')}
     >
       <Flex flex="1" alignItems="center" justifyContent="flex-start">
-        <SaveNav
-          width={`${getMeasurement('navbarWidth')}px`}
-          account={account}
-          borderRadius="4px"
-          ml="xs"
-        />
         <BorrowNav
           width={`${getMeasurement('navbarWidth')}px`}
           viewedAddress={viewedAddress}
