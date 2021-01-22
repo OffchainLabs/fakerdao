@@ -9,7 +9,7 @@ const PageContentLayout = ({
   ...props
 }) => {
   return (
-    <Box p={{ s: '25px 12px', l: '30px 32px' }} {...props}>
+    <Box p={{ s: '25px 12px', l: '30px 32px' }} {...props} style={{backgroundColor: '#ddf1fd'}}>
       <Box maxWidth="1200px" mx="auto">
         {enableNotifications && <Notifications />}
         {children}
