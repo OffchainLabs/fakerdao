@@ -67,7 +67,7 @@ const MainNav = ({ onLinkClicked, ...props }) => {
       >
         {lang.navbar.borrow}
       </Link>
-      <Link href="https://qqq.com/">Dapp Portal</Link>
+      <Link href="https://qqq.com/">More Dapps</Link>
     </MainNavStyle>
   );
 };
@@ -336,7 +336,6 @@ const MarketingLayout = ({
           </Box>
         </MobileMenu>
         {children}
-        <CookieNotice />
         <Footer>
           <div className="navs">
             {showNavInFooter && (
@@ -348,25 +347,9 @@ const MarketingLayout = ({
                 <SeparatorDot m="0 38px" />
               </Flex>
             )}
-            <Nav className="legal-nav">
-              <Link href={'https://oasis.app/privacy'}>
-                {lang.navbar.privacy}
-              </Link>
-              <Link href={'https://oasis.app/terms'}>{lang.navbar.terms}</Link>
-              {extraLegalLinks.map(link => (
-                <Link
-                  href={link.url}
-                  key={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </Nav>
           </div>
           <div className="copyright">
-            © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
+            © {new Date().getFullYear()} Offchain Labs; forked from <a href="https://github.com/makerdao/mcd-cdp-portal" target="_blank">here</a>; not officially officiated with any other project.
           </div>
         </Footer>
       </MarketingLayoutStyle>

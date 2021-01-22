@@ -207,17 +207,6 @@ const WalletConnectDropdown = ({ trigger, close = () => {}, ...props }) => {
         <BrowserView>
           <Option
             onClick={() => {
-              connectLedgerWallet();
-              close();
-            }}
-            icon={<StyledLedgerLogo />}
-          >
-            {lang.formatString(lang.connect_to, 'Ledger Nano')}
-          </Option>
-        </BrowserView>
-        <BrowserView>
-          <Option
-            onClick={() => {
               connectTrezorWallet();
               close();
             }}

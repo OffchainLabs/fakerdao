@@ -44,15 +44,6 @@ function BorrowMarkets() {
           cdpTypesList={cdpTypesList}
           style={{ marginTop: '60px', marginBottom: '17px' }}
         />
-        <Box textAlign="left">
-          <Link href={'https://makerdao.com/feeds'} target="_blank">
-            <Text color="blue" fontSize="15px">
-              {lang.sidebar.view_price_feeds}
-            </Text>
-            &nbsp;&nbsp;
-            <ExternalLinkIcon fill="#447afb" />
-          </Link>
-        </Box>
       </StyledPageContentLayout>
     </MarketingLayout>
   );

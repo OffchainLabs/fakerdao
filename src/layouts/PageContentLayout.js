@@ -13,7 +13,6 @@ const PageContentLayout = ({
       <Box maxWidth="1200px" mx="auto">
         {enableNotifications && <Notifications />}
         {children}
-        <CookieNotice />
       </Box>
     </Box>
   );
