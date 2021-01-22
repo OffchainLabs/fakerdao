@@ -131,9 +131,7 @@ export default mount({
         view: <Save viewedAddress={viewedAddress} />
       };
     })
-  ),
-
-  '/trade': withView(() => <TradeLanding />)
+  )
 });
 
 function RouteEffects({ network }) {
