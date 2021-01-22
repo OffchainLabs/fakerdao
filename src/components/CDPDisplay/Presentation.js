@@ -468,7 +468,7 @@ export default function({
         </CdpViewCard>
       </Grid>
 
-      {FF_VAULT_HISTORY && showVaultHistory && (
+      {false && showVaultHistory && (
         <History
           title={lang.cdp_page.tx_history}
           rows={eventHistory}
