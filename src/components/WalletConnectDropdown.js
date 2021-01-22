@@ -207,17 +207,6 @@ const WalletConnectDropdown = ({ trigger, close = () => {}, ...props }) => {
         <BrowserView>
           <Option
             onClick={() => {
-              connectTrezorWallet();
-              close();
-            }}
-            icon={<StyledTrezorLogo />}
-          >
-            {lang.formatString(lang.connect_to, 'Trezor')}
-          </Option>
-        </BrowserView>
-        <BrowserView>
-          <Option
-            onClick={() => {
               connectToProviderOfType(AccountTypes.WALLETCONNECT);
               close();
             }}
@@ -226,39 +215,9 @@ const WalletConnectDropdown = ({ trigger, close = () => {}, ...props }) => {
             {lang.landing_page.wallet_connect}
           </Option>
         </BrowserView>
-        <BrowserView>
-          <Option
-            onClick={() => {
-              connectToProviderOfType(AccountTypes.MEWCONNECT);
-              close();
-            }}
-            icon={<MewConnectLogo />}
-          >
-            {lang.providers.mewconnect}
-          </Option>
-        </BrowserView>
-        <BrowserView>
-          <Option
-            onClick={() => {
-              connectToProviderOfType(AccountTypes.WALLETLINK);
-              close();
-            }}
-            icon={<StyledWalletLinkLogo />}
-          >
-            {lang.landing_page.wallet_link}
-          </Option>
-        </BrowserView>
-        <BrowserView>
-          <Option
-            onClick={() => {
-              connectDcentWallet();
-              close();
-            }}
-            icon={<StyledDcentLogo />}
-          >
-            {lang.providers.dcent}
-          </Option>
-        </BrowserView>
+
+
+
         <BrowserView>
           <Option
             onClick={() => {
