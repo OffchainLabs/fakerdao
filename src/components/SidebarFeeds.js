@@ -12,6 +12,7 @@ const StyledCardBody = styled(CardBody)`
 `;
 
 const SidebarFeeds = ({ feeds }) => {
+  // console.info('feeds', feeds);
   const [collapsed, setCollapsed] = useState(true);
   const { lang } = useLanguage();
 
@@ -19,13 +20,6 @@ const SidebarFeeds = ({ feeds }) => {
     <Card pt="sm" css={'overflow:hidden;'}>
       <Flex justifyContent="space-between" alignContent="center" px="s" pt="">
         <Text t="h4">{lang.sidebar.price_feeds}</Text>
-        <Link href={'https://makerdao.com/feeds'} target="_blank">
-          <Text t="p5" color="steel" fontSize="s2">
-            {lang.sidebar.view_price_feeds}
-          </Text>
-          &nbsp;
-          <ExternalLinkIcon fill="#708390" />
-        </Link>
       </Flex>
 
       <CardBody mt="s2">
