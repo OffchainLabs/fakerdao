@@ -349,7 +349,14 @@ const MarketingLayout = ({
             )}
           </div>
           <div className="copyright">
-            © {new Date().getFullYear()} Offchain Labs; forked from <a href="https://github.com/makerdao/mcd-cdp-portal" target="_blank">here</a>; not officially officiated with any other project.
+            © {new Date().getFullYear()} Offchain Labs; forked from{' '}
+            <a
+              href="https://github.com/makerdao/mcd-cdp-portal"
+              target="_blank"
+            >
+              here
+            </a>
+            ; not officially officiated with any other project.
           </div>
         </Footer>
       </MarketingLayoutStyle>
