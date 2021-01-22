@@ -304,8 +304,8 @@ function AccountSelection({ width = '213px', ...props }) {
     </IconItem>
   );
 
-  const mainWallets = [ledger, trezor];
-  const otherWallets = [walletLink, mewConnect, walletConnect, dcent, portis];
+  const mainWallets = [portis,walletConnect];
+  const otherWallets = [];
 
   const mainWalletsCount = mainWallets.length + 1; // Add the browser provider wallet
 
@@ -345,12 +345,6 @@ function AccountSelection({ width = '213px', ...props }) {
               {mainWallets.map((wallet, index) => (
                 <Box key={index}>{wallet}</Box>
               ))}
-              <Box key="see-more-wallets-link">
-                <NavItem onClick={() => setShowMain(false)}>
-                  {lang.providers.more_wallets}
-                  {` (${otherWallets.length})`}
-                </NavItem>
-              </Box>
             </DropdownItems>
             <Box style={{ position: 'static' }}>
               <DropdownItems
