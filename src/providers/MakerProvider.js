@@ -60,10 +60,12 @@ function MakerProvider({
         .find(acc => acc.address.toUpperCase() === address.toUpperCase());
     }
 
-    if (browserProvider.networkId !== networkId)
+    if (browserProvider.networkId !== networkId){
+    
       throw new Error(
-        'browser ethereum provider and URL network param do not match.'
+        'wrong network ID; connect to https://kovan3.arbitrum.io/rpc for the Arbitrum testnet.'
       );
+    }
     if (
       !browserProvider.address ||
       !browserProvider.address.match(/^0x[a-fA-F0-9]{40}$/)
