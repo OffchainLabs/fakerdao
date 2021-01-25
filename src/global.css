@@ -10,6 +10,7 @@ body {
     Roboto, Segoe UI, sans-serif;
   color: #0e1029;
   overflow-y: scroll;
+  background-color:#e4f8ff;
 }
 a {
   color: inherit;
