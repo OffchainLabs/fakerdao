@@ -58,7 +58,7 @@ const SidebarSystem = ({ system }) => {
             </Text>
             <Box>
               <Text fontSize="s" color="darkPurple">
-                {value}
+                {value && value.includes('DAI') ? value.replace('DAI', 'AUSD') : value}
               </Text>
             </Box>
           </Flex>
