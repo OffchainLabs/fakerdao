@@ -11,7 +11,7 @@ function useOraclePrices({ gem, interval = 5 * 1000 }) {
   });
   const { maker } = useMaker();
 
-  const isValidNetwork = ['mainnet', 'kovan'].some(
+  const isValidNetwork = ['mainnet', 'kovan', 'arbitrum'].some(
     network => network === maker.service('web3').networkName
   );
 
