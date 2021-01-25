@@ -19,7 +19,7 @@ const DsrDeposit = ({ savings, reset }) => {
   const { maker } = useMaker();
 
   const { symbol } = DAI;
-  const displaySymbol = 'DAI';
+  const displaySymbol = 'AUSD';
 
   const { daiLockedInDsr } = savings;
   const { DAI: daiBalance } = useWalletBalances();
