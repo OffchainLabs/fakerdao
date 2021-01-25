@@ -160,7 +160,7 @@ function Overview({ viewedAddress }) {
                 .reduce((acc, { debtValue }) => debtValue.plus(acc), 0)
                 .toBigNumber()
                 .toFixed(2)}`}
-              denom={'DAI'}
+              denom={'AUSD'}
             />
           </Grid>
           <Box>
