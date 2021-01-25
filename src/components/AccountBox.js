@@ -194,7 +194,7 @@ const WalletBalances = ({ hasActiveAccount, closeSidebarDrawer }) => {
               (!collapsed || idx < 4) && (
                 <TokenBalance
                   key={`tokenbalance_${idx}`}
-                  symbol={symbol}
+                  symbol={symbol === 'DAI' ? 'AUSD': symbol } 
                   amount={amount}
                   usdRatio={usdRatio}
                   hasActiveAccount={hasActiveAccount}
