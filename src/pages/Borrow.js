@@ -87,6 +87,7 @@ const HeroBackground = (() => {
       #fedb88 100%
     );
     filter: blur(13px);
+    z-index: 9999;
   `;
 
   const DimBall = styled(Ball)`
@@ -227,7 +228,7 @@ function Borrow({ disableConnect = false }) {
 
   return (
     <MarketingLayout showNavInFooter={true}>
-      <StyledPageContentLayout>
+      <StyledPageContentLayout transparant={true}>
         <PageHead
           title={lang.borrow_landing.meta.title}
           description={lang.borrow_landing.meta.description}
