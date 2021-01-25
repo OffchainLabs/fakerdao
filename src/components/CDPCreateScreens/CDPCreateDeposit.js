@@ -157,7 +157,7 @@ function OpenCDPForm({
               });
             }}
           >
-            {formatter(daiAvailableToGenerate)} DAI
+            {formatter(daiAvailableToGenerate)} AUSD
           </Text>
         </Box>
         <RatioDisplay
