@@ -26,7 +26,7 @@ export default function useProxy() {
     if (!account) return null;
     if (proxyAddress) return proxyAddress;
 
-    const txPromise = maker.service('proxy').ensureProxy();
+    const txPromise = maker.service('proxy').ensureProxy({ gas: 200000000 });
 
     const txMgr = maker.service('transactionManager');
     txMgr.listen(txPromise, {

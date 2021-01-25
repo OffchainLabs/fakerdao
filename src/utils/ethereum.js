@@ -135,6 +135,6 @@ export function pollTokenPrices(maker, token) {
 
 export const calculateGasCost = async (maker, gasLimit = 21000) => {
   const _gasLimit = BigNumber(gasLimit);
-  const gasPrice = 0
+  const gasPrice = 0;
   return _gasLimit.times(gasPrice).shiftedBy(-18);
 };
