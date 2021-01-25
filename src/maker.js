@@ -85,7 +85,7 @@ export async function instantiateMaker({
     provider: {
       url: rpcUrl,
       type:
-        network === 'testnet' || network === "arbitrum"
+        network === 'testnet' || network === 'arbitrum'
           ? 'HTTP'
           : getQueryParamByName('ws') === '0'
           ? 'HTTP'
