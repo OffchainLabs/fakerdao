@@ -159,7 +159,7 @@ const DepositAndGenerate = ({ vault, reset }) => {
     !generateAmount ||
     depositFailureMessage ||
     generateFailureMessage;
-  const _symbol = symbol === 'DAI' ? 'AUSD': symbol
+  const _symbol = symbol === 'DAI' ? 'AUSD' : symbol;
   return (
     <Grid gridRowGap="m">
       <Grid gridRowGap="s">
