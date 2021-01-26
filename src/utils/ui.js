@@ -64,7 +64,7 @@ export function prettifyNumber(
       minimumFractionDigits: decimalPlaces
     });
   }
-  const _symbol = symbol === "DAI" ? 'AUSD' : symbol
+  const _symbol = symbol === 'DAI' ? 'AUSD' : symbol;
   return keepSymbol ? formattedNumber + _symbol : formattedNumber;
 }
 
@@ -97,7 +97,7 @@ export function firstLetterLowercase(str) {
 }
 
 export function cleanSymbol(s) {
-  if(s === 'DAI') return 'AUSD'
+  if (s === 'DAI') return 'AUSD';
   if (s === 'DSR-DAI') return 'DAI';
   return s;
 }
@@ -199,20 +199,27 @@ export const formatCurrencyValue = ({
   integer = false,
   infinity = 'N/A',
   rounding = BigNumber.ROUND_DOWN
-}) => {  
-  if (value instanceof Currency) {
-    value = value.toBigNumber()
+}) => {
+  if(typeof value === 'number'){
+    return value
   }
-  else if (!BigNumber.isBigNumber(value)){ 
+  if (value instanceof Currency) {
+    value = value.toBigNumber();
+  } else if (!BigNumber.isBigNumber(value)) {
     // value = BigNumber(value)
-    value = value._amount ?  value._amount: value
+    value = value._amount ? value._amount : value;
+
   }
   if (['Infinity', Infinity].includes(value.toFixed(precision)))
     return infinity;
-  if (percentage) value = value.times(100);
-  
-  if (integer) value = value.integerValue(BigNumber.ROUND_HALF_UP);
-  
+  if (percentage) {
+    value = value.times(100);
+  }
+
+  if (integer)  {    
+    value =  value.integerValue(BigNumber.ROUND_HALF_UP);
+  }
+
   if (value.lt(1) && rounding === BigNumber.ROUND_DOWN) {
     precision = value.eq(0) ? short : medium;
   }
