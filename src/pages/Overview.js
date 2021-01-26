@@ -284,7 +284,7 @@ function Overview({ viewedAddress }) {
                           </Table.td>
                           <Table.td display={{ s: 'none', xl: 'table-cell' }}>
                             <Text t="caption" color="darkLavender">
-                              {debtValue.toBigNumber().toFixed(2)} DAI
+                              {debtValue.toBigNumber().toFixed(2)} AUSD
                             </Text>
                           </Table.td>
                           <Table.td>

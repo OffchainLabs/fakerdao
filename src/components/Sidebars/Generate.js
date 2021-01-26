@@ -99,7 +99,7 @@ const Generate = ({ vault, reset }) => {
           value={amount}
           min="0"
           onChange={onAmountChange}
-          placeholder="0.00 DAI"
+          placeholder="0.00 AUSD"
           failureMessage={failureMessage}
           data-testid="generate-input"
         />

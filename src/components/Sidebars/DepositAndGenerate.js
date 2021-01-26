@@ -159,7 +159,7 @@ const DepositAndGenerate = ({ vault, reset }) => {
     !generateAmount ||
     depositFailureMessage ||
     generateFailureMessage;
-
+  const _symbol = symbol === 'DAI' ? 'AUSD': symbol
   return (
     <Grid gridRowGap="m">
       <Grid gridRowGap="s">
@@ -167,14 +167,14 @@ const DepositAndGenerate = ({ vault, reset }) => {
           {lang.action_sidebar.deposit_and_generate_title}
         </Text.h4>
         <Text t="body">
-          {lang.formatString(lang.action_sidebar.deposit_description, symbol)}
+          {lang.formatString(lang.action_sidebar.deposit_description, _symbol)}
         </Text>
         <Input
           type="number"
           min="0"
           value={depositAmount}
           onChange={onDepositAmountChange}
-          placeholder={`0.00 ${symbol}`}
+          placeholder={`0.00 ${_symbol}`}
           failureMessage={depositFailureMessage}
           data-testid="deposit-input"
         />
@@ -185,7 +185,7 @@ const DepositAndGenerate = ({ vault, reset }) => {
           value={generateAmount}
           min="0"
           onChange={onGenerateAmountChange}
-          placeholder="0.00 DAI"
+          placeholder="0.00 AUSD"
           failureMessage={generateFailureMessage}
         />
       </Grid>
@@ -200,24 +200,26 @@ const DepositAndGenerate = ({ vault, reset }) => {
       <InfoContainer>
         <Info
           title={lang.action_sidebar.current_account_balance}
-          body={`${formatter(gemBalance, { precision: long })} ${symbol}`}
+          body={`${formatter(gemBalance, { precision: long })} ${_symbol}`}
         />
         <Info
           title={lang.formatString(
             lang.action_sidebar.gem_usd_price_feed,
-            symbol
+            _symbol
           )}
-          body={`${formatter(collateralTypePrice)} USD/${symbol}`}
+          body={`${formatter(collateralTypePrice)} USD/${_symbol}`}
         />
         <Info
           title={lang.action_sidebar.maximum_available_to_generate}
-          body={`${formatter(calculatedDaiAvailable, { precision: long })} AUSD`}
+          body={`${formatter(calculatedDaiAvailable, {
+            precision: long
+          })} AUSD`}
         />
         <Info
           title={lang.action_sidebar.new_liquidation_price}
           body={`${formatter(calculatedLiquidationPrice, {
             infinity: BigNumber(0).toFixed(medium)
-          })} USD/${symbol}`}
+          })} USD/${_symbol}`}
         />
         <Info
           title={lang.action_sidebar.new_collateralization_ratio}
