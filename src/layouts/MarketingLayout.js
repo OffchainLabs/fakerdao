@@ -356,7 +356,7 @@ const MarketingLayout = ({
             >
               here
             </a>
-            ; not officially officiated with any other project.
+            ; not officially affiliated with any other project.
           </div>
         </Footer>
       </MarketingLayoutStyle>
