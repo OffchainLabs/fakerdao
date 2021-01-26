@@ -139,7 +139,7 @@ const Generate = ({ vault, reset }) => {
       <InfoContainer>
         <Info
           title={lang.action_sidebar.maximum_available_to_generate}
-          body={`${formatter(daiAvailable, { precision: long })} DAI`}
+          body={`${formatter(daiAvailable, { precision: long })} AUSD`}
         />
         <Info
           title={lang.action_sidebar.new_liquidation_price}

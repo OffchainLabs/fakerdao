@@ -17,7 +17,7 @@ function NextPriceLiquidation({ vaultType, collateral, debt }) {
           ? nextPriceUpdate.toTimeString().split(' ')[0]
           : '-- : --',
         `${collateral} ${gem}`,
-        `${debt} DAI`
+        `${debt} AUSD`
       )}
     </Text.p>
   );

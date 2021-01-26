@@ -52,7 +52,7 @@ const CDPCreateConfirmSummary = ({
       lang.verbs.depositing,
       `${prettifyNumber(cdpParams.gemsToLock)} ${selectedIlk.gem}`
     ],
-    [lang.verbs.generating, `${prettifyNumber(cdpParams.daiToDraw)} DAI`],
+    [lang.verbs.generating, `${prettifyNumber(cdpParams.daiToDraw)} AUSD`],
     [
       lang.collateralization,
       `${formatter(

@@ -160,7 +160,7 @@ export default function({
             lang.notifications.vault_below_current_price,
             vaultType,
             `${formatter(currentCollateralNeeded)} ${gem}`,
-            `${formatter(currentDebtNeeded)} DAI`
+            `${formatter(currentDebtNeeded)} AUSD`
           ),
           level: SAFETY_LEVELS.DANGER
         });

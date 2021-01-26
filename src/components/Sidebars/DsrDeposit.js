@@ -81,7 +81,7 @@ const DsrDeposit = ({ savings, reset }) => {
           disabled={!hasAllowance}
           type="number"
           min="0"
-          placeholder="0 DAI"
+          placeholder="0 AUSD"
           value={depositAmount}
           onChange={onDepositAmountChange}
           error={depositAmountErrors}

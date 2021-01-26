@@ -211,7 +211,7 @@ const DepositAndGenerate = ({ vault, reset }) => {
         />
         <Info
           title={lang.action_sidebar.maximum_available_to_generate}
-          body={`${formatter(calculatedDaiAvailable, { precision: long })} DAI`}
+          body={`${formatter(calculatedDaiAvailable, { precision: long })} AUSD`}
         />
         <Info
           title={lang.action_sidebar.new_liquidation_price}

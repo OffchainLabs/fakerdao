@@ -32,13 +32,13 @@ function DepositDaiForm({
         onChange={onDepositAmountChange}
         failureMessage={depositAmountErrors}
         min="0"
-        placeholder="0 DAI"
+        placeholder="0 AUSD"
         data-testid="dsrdeposit-onboarding-input"
       />,
       <Box key="ba">
         <Text t="subheading">{lang.your_balance} </Text>
         <Text t="caption" display="inline-block" ml="s" color="darkLavender">
-          {prettifyNumber(daiBalance)} {'DAI'}
+          {prettifyNumber(daiBalance)} {'AUSD'}
         </Text>
       </Box>
     ]

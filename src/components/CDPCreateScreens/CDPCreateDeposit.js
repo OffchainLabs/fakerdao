@@ -119,7 +119,7 @@ function OpenCDPForm({
       <Input
         key="daiToDraw"
         name="daiToDraw"
-        after="DAI"
+        after="AUSD"
         width={300}
         type="number"
         failureMessage={
@@ -253,7 +253,7 @@ const CDPCreateDepositSidebar = ({
         ],
         [
           lang.cdp_create.max_dai_available_to_generate,
-          `${formatter(maxDaiAvailableToGenerate)} Dai`
+          `${formatter(maxDaiAvailableToGenerate)} AUSD`
         ]
       ].map(([title, value]) => (
         <Grid gridRowGap="xs" key={title}>

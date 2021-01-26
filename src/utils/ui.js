@@ -64,7 +64,8 @@ export function prettifyNumber(
       minimumFractionDigits: decimalPlaces
     });
   }
-  return keepSymbol ? formattedNumber + symbol : formattedNumber;
+  const _symbol = symbol === "DAI" ? 'AUSD' : symbol
+  return keepSymbol ? formattedNumber + _symbol : formattedNumber;
 }
 
 export function prettifyFloat(num, decimalPlaces = 2) {
@@ -96,6 +97,7 @@ export function firstLetterLowercase(str) {
 }
 
 export function cleanSymbol(s) {
+  if(s === 'DAI') return 'AUSD'
   if (s === 'DSR-DAI') return 'DAI';
   return s;
 }
@@ -203,7 +205,7 @@ export const formatCurrencyValue = ({
   }
   else if (!BigNumber.isBigNumber(value)){ 
     // value = BigNumber(value)
-    value = value._amount
+    value = value._amount ?  value._amount: value
   }
   if (['Infinity', Infinity].includes(value.toFixed(precision)))
     return infinity;
