@@ -18,10 +18,30 @@ import {
   UNI,
   RENBTC,
   AAVE,
-  UNIV2DAIETH
+  UNIV2DAIETH,
+  ARB,
+  ATKN
 } from '@makerdao/dai-plugin-mcd';
 
 export default [
+  {
+    slug: 'arb-a',
+    symbol: 'ARB-A',
+    key: 'ARB-A',
+    gem: 'ARB',
+    currency: ARB,
+    networks: ['kovan', 'arbitrum'],
+    decimals: 18
+  },
+  {
+    slug: 'atkn-a',
+    symbol: 'ATKN-A',
+    key: 'ATKN-A',
+    gem: 'ATKN',
+    currency: ATKN,
+    networks: ['kovan', 'arbitrum'],
+    decimals: 18
+  },
   {
     slug: 'eth-a', // URL param
     symbol: 'ETH-A', // how it's displayed in the UI
@@ -44,7 +64,7 @@ export default [
     key: 'BAT-A',
     gem: 'BAT',
     currency: BAT,
-    networks: ['kovan', 'mainnet', 'testnet', 'rinkeby', 'ropsten', 'goerli', 'arbitrum']
+    networks: ['kovan', 'mainnet', 'testnet', 'rinkeby', 'ropsten', 'goerli']
   },
   {
     slug: 'usdc-a',

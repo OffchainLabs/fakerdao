@@ -1,5 +1,5 @@
 {
-  "supportedNetworkIds": ["1337", "999", "5", "4", "3", "42", "1"],
+  "supportedNetworkIds": ["1337", "999", "5", "4", "3", "42", "1", "79377087078960"],
   "rpcUrls": {
     "1": "https://mainnet.infura.io/v3/58073b4a32df4105906c702f167b91d2",
     "42": "https://kovan.infura.io/v3/58073b4a32df4105906c702f167b91d2",
@@ -7,7 +7,8 @@
     "4": "https://rinkeby.infura.io/v3/58073b4a32df4105906c702f167b91d2",
     "5": "https://goerli.infura.io/v3/58073b4a32df4105906c702f167b91d2",
     "999": "http://localhost:2000",
-    "1337": "http://localhost:2000"
+    "1337": "http://localhost:2000",
+    "79377087078960": "https://kovan3.arbitrum.io/rpc"
   },
   "wsRpcUrls": {
     "1": "wss://mainnet.infura.io/ws/v3/58073b4a32df4105906c702f167b91d2",
@@ -23,7 +24,8 @@
     "4": "rinkeby",
     "5": "goerli",
     "999": "testnet",
-    "1337": "testnet"
+    "1337": "testnet",
+    "79377087078960": "arbitrum"
   },
   "networkDisplayNames": {
     "1": "Mainnet",
@@ -32,35 +34,15 @@
     "4": "Rinkeby Testnet",
     "5": "Goerli Testnet",
     "999": "Testchain",
-    "1337": "Ex_Testchain"
+    "1337": "Ex_Testchain",
+    "79377087078960": "Arb Testnet V3"
   },
-  "defaultNetwork": "1",
+  "defaultNetwork": "79377087078960",
   "exTestchainApiUrl": "http://localhost:4000/chain",
   "showWalletTokens": [
     "DAI",
-    "DSR",
-    "ETH",
-    "SAI",
-    "WETH",
-    "BAT",
-    "USDC",
-    "WBTC",
-    "TUSD",
-    "KNC",
-    "ZRX",
-    "MANA",
-    "USDT",
-    "PAXUSD",
-    "COMP",
-    "LRC",
-    "LINK",
-    "YFI",
-    "BAL",
-    "GUSD",
-    "UNI",
-    "RENBTC",
-    "AAVE",
-    "UNIV2DAIETH"
+    "ATKN",
+    "ARB"
   ],
   "trackingPages": {
     "Overview": "Overview",

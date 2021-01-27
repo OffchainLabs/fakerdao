@@ -394,7 +394,7 @@ const cdpTypesMetaData = {
 
 const BorrowCalculator = ({ prices, cdpTypesList, ...props }) => {
   const { lang } = useLanguage();
-  const [selectedSymbol, setSelectedSymbol] = useState('ETH-A');
+  const [selectedSymbol, setSelectedSymbol] = useState('ATKN-A');
 
   const interfaceLocale = lang.getInterfaceLanguage();
 
@@ -410,7 +410,7 @@ const BorrowCalculator = ({ prices, cdpTypesList, ...props }) => {
     }));
 
   const selectedIlk = ilks.find(ilk => ilk.symbol === selectedSymbol);
-  const getTokenName = ilk => ilk.symbol.split('-')[0];
+  const getTokenName = ilk => ilk  ? ilk.symbol .split('-')[0] : "X";
   const collateralAmounts = ilks.reduce((acc, ilk) => {
     acc[ilk.symbol] = ilk.amountStart;
     return acc;
@@ -627,7 +627,7 @@ const SaveCalculator = (() => {
               value={initialDeposit}
               onChange={value => setInitialDeposit(value)}
               displayValue={value =>
-                `${prettifyCurrency(locale, value, 0)} DAI`
+                `${prettifyCurrency(locale, value, 0)} AUSD`
               }
             />
           </SliderAndLabel>
@@ -640,7 +640,7 @@ const SaveCalculator = (() => {
               value={monthlyContribution}
               onChange={value => setMonthlyContribution(value)}
               displayValue={value =>
-                `${prettifyCurrency(locale, value, 0)} DAI`
+                `${prettifyCurrency(locale, value, 0)} AUSD`
               }
             />
           </SliderAndLabel>

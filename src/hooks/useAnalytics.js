@@ -65,8 +65,10 @@ export default function useAnalytics(section, page = null, product = null) {
     };
 
     // Fathom interprets 'amount' in cents, multiply by 100 to get dollars
-    const trackFathomGoal = goal =>
-      window.fathom('trackGoal', fathomGoals[goal.id], goal.amount * 100 || 0);
+    const trackFathomGoal = goal =>{
+
+      // window.fathom('trackGoal', fathomGoals[goal.id], goal.amount * 100 || 0);
+    }
 
     const getProductName = pathname => {
       return isBorrow ? 'Borrow' : isSave ? 'Save' : pathname;

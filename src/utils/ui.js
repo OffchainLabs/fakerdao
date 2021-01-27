@@ -200,15 +200,14 @@ export const formatCurrencyValue = ({
   infinity = 'N/A',
   rounding = BigNumber.ROUND_DOWN
 }) => {
-  if(typeof value === 'number'){
-    return value
+  if (typeof value === 'number') {
+    return value;
   }
   if (value instanceof Currency) {
     value = value.toBigNumber();
   } else if (!BigNumber.isBigNumber(value)) {
     // value = BigNumber(value)
     value = value._amount ? value._amount : value;
-
   }
   if (['Infinity', Infinity].includes(value.toFixed(precision)))
     return infinity;
@@ -216,8 +215,8 @@ export const formatCurrencyValue = ({
     value = value.times(100);
   }
 
-  if (integer)  {    
-    value =  value.integerValue(BigNumber.ROUND_HALF_UP);
+  if (integer) {
+    value = value.integerValue(BigNumber.ROUND_HALF_UP);
   }
 
   if (value.lt(1) && rounding === BigNumber.ROUND_DOWN) {

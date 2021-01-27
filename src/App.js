@@ -40,7 +40,7 @@ function App() {
           reactGa.pageview(route.url.href);
 
           log(`[Fathom] Tracked pageview: ${route.url.href}`);
-          window.fathom('trackPageview');
+          // window.fathom('trackPageview');
         }
       });
     }
