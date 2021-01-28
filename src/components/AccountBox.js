@@ -173,7 +173,7 @@ const WalletBalances = ({ hasActiveAccount, closeSidebarDrawer }) => {
     <>
       <CardBody css={{ borderRadius: '0 0 4px 4px', overflow: 'hidden' }}>
         <Box px="s" pt="sm" pb="s2">
-          <Text t="large">{lang.sidebar.wallet_balances}</Text>
+          <Text t="large">{lang.sidebar.wallet_balances} <a className="faucet-link" href="https://faucet.arbitrum.io/" target="blank">(token faucet &#10532;)</a></Text>
         </Box>
         <Flex justifyContent="space-between" px="s" mb="4px">
           <Text color="steel" fontWeight="bold" t="smallCaps" width="20%">

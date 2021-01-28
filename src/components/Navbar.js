@@ -13,6 +13,7 @@ const Navbar = ({ viewedAddress }) => {
       <Flex alignItems="center" justifyContent="center" py="m" />
       <Grid mx="0px">
         <BorrowNav viewedAddress={viewedAddress} account={account} />
+        <a target="_blank" href="https://portal.arbitrum.io/" className="more-arb-dapps">More Arbitrum Dapps</a>
       </Grid>
     </Box>
   );

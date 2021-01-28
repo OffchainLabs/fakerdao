@@ -10,6 +10,6 @@ const StyledLink = styled(Link)`
 
 export default styled(props => (
   <StyledLink {...props} href="/">
-    FakerDAO
+    FakerDAO 
   </StyledLink>
 ))``;

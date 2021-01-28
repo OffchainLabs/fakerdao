@@ -67,7 +67,7 @@ const MainNav = ({ onLinkClicked, ...props }) => {
       >
         {lang.navbar.borrow}
       </Link>
-      <Link href="https://qqq.com/">More Dapps</Link>
+      <Link href="https://portal.arbitrum.io/">More Dapps</Link>
     </MainNavStyle>
   );
 };

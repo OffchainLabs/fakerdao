@@ -47,3 +47,15 @@ a {
   src: url('/borrow/fonts/SFMono-Regular.otf');
   font-style: normal;
 }
+
+
+.faucet-link{
+  color: #4242ff;
+  font-size: 14px;
+}
+
+.more-arb-dapps{
+  color: white;
+  font-size: 14px;
+  padding: 8px;
+}

@@ -25,15 +25,6 @@ import {
 
 export default [
   {
-    slug: 'arb-a',
-    symbol: 'ARB-A',
-    key: 'ARB-A',
-    gem: 'ARB',
-    currency: ARB,
-    networks: ['kovan', 'arbitrum'],
-    decimals: 18
-  },
-  {
     slug: 'atkn-a',
     symbol: 'ATKN-A',
     key: 'ATKN-A',

@@ -61,7 +61,13 @@ export async function instantiateMaker({
   const mcdPluginConfig = {
     defaultCdpTypes,
     prefetch: false,
-    addressOverrides
+    addressOverrides,
+    web3: {
+      transactionSettings: {
+        gasPrice: 0,
+        gasLimit: 9999999999999
+      },
+    }
   };
   const walletLinkPluginConfig = {
     rpcUrl: networkConfig.rpcUrls[networkNameToId(network)]

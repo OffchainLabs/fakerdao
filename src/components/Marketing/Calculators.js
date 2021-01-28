@@ -410,7 +410,7 @@ const BorrowCalculator = ({ prices, cdpTypesList, ...props }) => {
     }));
 
   const selectedIlk = ilks.find(ilk => ilk.symbol === selectedSymbol);
-  const getTokenName = ilk => ilk  ? ilk.symbol .split('-')[0] : "X";
+  const getTokenName = ilk => (ilk ? ilk.symbol.split('-')[0] : 'X');
   const collateralAmounts = ilks.reduce((acc, ilk) => {
     acc[ilk.symbol] = ilk.amountStart;
     return acc;
